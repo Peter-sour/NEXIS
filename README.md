@@ -65,19 +65,3 @@ Saya membuat NEXIS sebagai sarana eksplorasi dan pembelajaran teknologi frontend
 
 📄 Lisensi
 Proyek ini dilisensikan di bawah lisensi MIT. Silakan gunakan, modifikasi, dan distribusikan sesuai kebutuhan.
-
-❓ FAQ (Frequently Asked Questions)
-Q: Apa itu NEXIS?
-A: NEXIS adalah proyek frontend modern berbasis Svelte dan TypeScript untuk belajar dan bereksperimen dengan teknologi web terbaru.
-
-Q: Teknologi apa saja yang digunakan?
-A: Proyek ini menggunakan Svelte, TypeScript, Vite, dan Node.js.
-
-Q: Bagaimana cara menjalankan proyek ini?
-A: Ikuti langkah pada bagian "Cara Menjalankan" di README ini.
-
-Q: Apakah saya bisa berkontribusi?
-A: Tentu! Silakan ajukan pull request atau buka isu (issue) jika ingin berkontribusi atau melaporkan bug.
-
-Q: Apakah proyek ini sudah siap dipakai di produksi?
-A: Saat ini proyek masih dalam tahap pengembangan aktif dan mungkin belum stabil untuk produksi.
