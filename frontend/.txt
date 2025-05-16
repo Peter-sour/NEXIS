@@ -1,0 +1,104 @@
+frontend/
+├── src/
+│   ├── routes/
+│   │   ├── +layout.svelte            # Layout global (header/footer/nav)
+│   │   ├── +page.svelte              # Halaman utama (redirect/login/chat)
+│   │   ├── login.svelte              # Halaman login nomor telepon
+│   │   ├── otp.svelte                # Halaman input kode OTP
+│   │   ├── chat.svelte               # Halaman chat utama
+│   │   ├── profile.svelte            # Halaman profil user
+│   │   └── settings.svelte           # Halaman pengaturan user (optional)
+│   │
+│   ├── lib/
+│   │   ├── components/
+│   │   │   ├── ChatWindow.svelte    # Jendela chat, tampilan pesan
+│   │   │   ├── Sidebar.svelte       # Sidebar kontak/room/chat list
+│   │   │   ├── UserProfile.svelte   # Komponen profil user
+│   │   │   ├── LoginForm.svelte     # Form login nomor telepon (dipisah)
+│   │   │   ├── OTPForm.svelte       # Form input kode OTP
+│   │   │   ├── MessageInput.svelte  # Input pesan di chat
+│   │   │   └── Button.svelte         # Komponen tombol reusable
+│   │   │
+│   │   ├── stores/
+│   │   │   ├── userStore.ts          # Store untuk data user, login state
+│   │   │   ├── chatStore.ts          # Store untuk pesan dan room chat
+│   │   │   └── uiStore.ts            # Store untuk UI state (loading, modal, dll)
+│   │   │
+│   │   ├── utils/
+│   │   │   ├── validators.ts         # Fungsi validasi (nomor HP, OTP, dll)
+│   │   │   ├── api.ts                # Fungsi untuk panggil API backend
+│   │   │   └── helpers.ts            # Fungsi utilitas umum
+│   │
+│   ├── styles/
+│   │   ├── tailwind.css              # Import TailwindCSS
+│   │   └── globals.css               # Styling global custom tambahan (kalau perlu)
+│   │
+│   ├── app.css                      # Bisa di-merge ke styles/tailwind.css
+│   └── hooks.server.ts              # Middleware server-side (opsional)
+│
+├── static/                         # File statis: logo, favicon, dll
+│
+├── tailwind.config.cjs             # Konfigurasi TailwindCSS
+├── postcss.config.cjs              # Konfigurasi PostCSS
+├── package.json                   # Konfigurasi npm & dependencies
+├── svelte.config.js                # Konfigurasi SvelteKit
+└── tsconfig.json                  # Konfigurasi TypeScript
+
+upgrade strutur
+
+
+frontend/
+├── src/
+│   ├── routes/
+│   │   ├── +layout.svelte              # Layout global (navbar, wrapper, dll)
+│   │   ├── +page.svelte                # Root redirect (ke /login atau /chat)
+│   │   ├── login/
+│   │   │   └── +page.svelte            # Halaman login nomor telepon
+│   │   ├── verify/
+│   │   │   └── +page.svelte            # Halaman input kode OTP
+│   │   ├── chat/
+│   │   │   └── +page.svelte            # Halaman utama chat
+│   │   ├── profile/
+│   │   │   └── +page.svelte            # Halaman profil user
+│   │   ├── settings/
+│   │   │   └── +page.svelte            # Halaman pengaturan user
+│   │   └── not-found.svelte            # (Opsional) Halaman 404 custom
+│
+│   ├── lib/
+│   │   ├── components/
+│   │   │   ├── ChatWindow.svelte       # Tampilan daftar pesan
+│   │   │   ├── Sidebar.svelte          # Sidebar daftar kontak/room
+│   │   │   ├── UserProfile.svelte      # Komponen profil user
+│   │   │   ├── LoginForm.svelte        # Form login nomor telepon
+│   │   │   ├── OTPForm.svelte          # Form input kode OTP
+│   │   │   ├── MessageInput.svelte     # Input pesan & tombol kirim
+│   │   │   └── Button.svelte           # Komponen tombol reusable
+│   │   │
+│   │   ├── stores/
+│   │   │   ├── userStore.ts            # Store: info user & login state
+│   │   │   ├── chatStore.ts            # Store: pesan dan room chat
+│   │   │   └── uiStore.ts              # Store: loading state, modal, dll
+│   │   │
+│   │   ├── utils/
+│   │   │   ├── validators.ts           # Validasi input (nomor HP, OTP, dll)
+│   │   │   ├── api.ts                  # Abstraksi pemanggilan API backend
+│   │   │   └── helpers.ts              # Fungsi utilitas umum
+│   │
+│   ├── styles/
+│   │   ├── tailwind.css                # Import base Tailwind
+│   │   └── globals.css                 # Style tambahan global (opsional)
+│   │
+│   ├── app.d.ts                        # Tipe global (auto dibuat)
+│   ├── app.css                         # (Opsional) bisa disatukan ke tailwind.css
+│   └── hooks.server.ts                 # Middleware (auth token, redirect)
+│
+├── static/                             # File statis (logo, favicon, dsb)
+│   ├── logo.png
+│   └── favicon.ico
+│
+├── tailwind.config.cjs                 # Konfigurasi TailwindCSS
+├── postcss.config.cjs                  # Konfigurasi PostCSS
+├── package.json                        # Dependencies npm
+├── svelte.config.js                    # Konfigurasi SvelteKit
+└── tsconfig.json                       # Konfigurasi TypeScript
+
