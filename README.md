@@ -24,10 +24,6 @@ NEXIS/
 ├── package.json # Konfigurasi npm
 └── tsconfig.json # Konfigurasi TypeScript
 
-yaml
-Copy
-Edit
-
 ---
 
 ## ⚙️ Cara Menjalankan
