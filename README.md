@@ -1,7 +1,5 @@
 # 🚀 NEXIS
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Peter-sour\&repo=NEXIS\&layout=compact)
-
 Selamat datang di **NEXIS** — sebuah proyek frontend modern yang dibangun menggunakan **Svelte** dan **TypeScript**.
 Proyek ini dirancang untuk menghasilkan antarmuka pengguna yang cepat, responsif, dan mudah dikembangkan.
 
